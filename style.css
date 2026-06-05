@@ -1,0 +1,86 @@
+:root {
+    --bg: #f0f1f5;
+    --cards: #bfc6d4;
+    --primaryText: #0a0e15;
+    --secondText: #4e576a;
+}
+
+/*body.darkmode {
+    --bg: #0a0e15;
+    --cards: #373f4e;
+    --primaryText: #f0f1f5;
+    --secondText: #bfc6d4;
+}*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--primaryText);
+    overflow: hidden;
+}
+
+#mapa {
+    display: none;
+}
+
+#ficha{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+#iconw img{
+    width: 50px;
+}
+
+#pesquisa-container{
+    flex: 1;
+    margin: 0 15px;
+}
+
+#pesquisa{
+    width: 100%;
+    padding: 8px;
+    flex-basis: auto;
+}
+
+#headerMenu{
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    display: none;
+}
+#menu.active {
+    display: flex;
+}
+
+div#iconw img{
+    width: 50px;
+}
+
+div#headercll{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    align-items: center;
+}
+
+
+
+ @media screen and (min-width: 992px) {
+    #mapa {
+        display: block;
+    }
+
+    header#ficha #menuIcon{
+        display: none;
+    }
+ }
