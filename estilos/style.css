@@ -55,6 +55,13 @@ body {
     flex-basis: auto;
 }
 
+#pesquisa-container input{
+    outline: none;
+    border: 1px solid var(--primaryText);
+    border-radius: 20px;
+    height: 35px;
+}
+
 #headerMenu{
     display: flex;
     align-items: center;
@@ -119,13 +126,3 @@ div#headercll{
 #ulFicha i{
     font-size: 1.5em;
 }
-
- @media screen and (min-width: 992px) {
-    #mapa {
-        display: block;
-    }
-
-    header#ficha #menuIcon{
-        display: none;
-    }
- }
