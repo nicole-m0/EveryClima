@@ -1,5 +1,6 @@
     body{
         overflow-y: auto;
+        overflow: hidden;
     }
 
     /* Layout principal */
@@ -30,13 +31,16 @@
 
     /* Logo */
     #headercll{
-        display: flex;
-        flex-direction: column;
-        gap: 30px !important;
+    display:flex;
+    flex-direction:column;
+
+    margin-top:0;
+    gap:20px;
     }
 
     #iconw img{
-        width: 60px;
+        width:55px;
+        height:55px;
     }
 
     /* Esconde hamburguer */
@@ -59,6 +63,7 @@
     #ulFicha{
         width: 100%;
         align-items: center;
+        margin-top: 200px;
     }
 
     #ulFicha a{
@@ -70,9 +75,7 @@
 
         justify-content: center;
         align-items: center;
-
         gap: 8px;
-
         text-align: center;
         padding: 10px;
     }
@@ -120,7 +123,7 @@
     }
 
     /* Cards temporários */
-    #climaprincipal{
+    #climaPrincipal{
         min-height: 250px;
         background: var(--cards);
         border-radius: 20px;

@@ -21,7 +21,6 @@
 body {
     background-color: var(--bg);
     color: var(--primaryText);
-    overflow: hidden;
 }
 
 #mapa {
@@ -29,9 +28,6 @@ body {
 }
 
 #ficha{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 10px;
 }
 
@@ -41,7 +37,6 @@ body {
 
 #pesquisa-container{
     flex: 1;
-    margin: 0 15px;
 }
 
 #headerMenu i {
@@ -50,9 +45,8 @@ body {
 }
 
 #pesquisa{
-    min-width: 350px;
-    padding: 8px;
-    flex-basis: auto;
+    width: 100%;
+    min-width: 0;
 }
 
 #pesquisa-container input{
@@ -67,6 +61,7 @@ body {
     align-items: center;
     flex-direction: column;
     position: relative;
+    flex-shrink: 0;
 }
 
 #menu {
@@ -89,12 +84,15 @@ body {
 div#iconw img{
     width: 50px;
 }
+div#iconw{
+    flex-shrink: 0;
+}
 
-div#headercll{
+#headercll{
     display: flex;
-    flex-direction: row;
-    padding: 10px;
     align-items: center;
+    width: 100%;
+    gap: 10px;
 }
 
 #ulFicha {
@@ -125,4 +123,19 @@ div#headercll{
 
 #ulFicha i{
     font-size: 1.5em;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+}
+
+#climaPrincipal,
+#previsaoProximasHoras,
+#airCondition,
+#previsaoSeteDias{
+    background-color: var(--cards);
+    min-height: 200px;
+    margin: 10px;
+    border-radius: 20px;
 }
