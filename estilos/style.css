@@ -5,12 +5,12 @@
     --secondText: #4e576a;
 }
 
-/*body.darkmode {
+body.darkmode {
     --bg: #0a0e15;
     --cards: #373f4e;
     --primaryText: #f0f1f5;
     --secondText: #bfc6d4;
-}*/
+}
 
 *{
     margin: 0;
@@ -102,8 +102,8 @@ div#iconw{
 }
 
 #ulFicha a {
-    color: #0a0e15;
-    background-color: #f0f1f5;
+    color: var(--primaryText);
+    background-color: var(--bg);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -113,7 +113,7 @@ div#iconw{
     padding: 10px 15px;
 }
 #ulFicha a:hover{
-    background-color: #bfc6d4;
+    background-color: var(--cards);
     transition: 0.5s;
 }
 
