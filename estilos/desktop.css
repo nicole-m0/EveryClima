@@ -1,6 +1,6 @@
     body{
+        overflow-x: hidden;
         overflow-y: auto;
-        overflow: hidden;
     }
 
     /* Layout principal */
@@ -22,7 +22,7 @@
         gap: 30px;
 
         width: 100px;
-        height: 100vh;
+        min-height: 100vh;
 
         padding-top: 20px;
 
@@ -51,6 +51,11 @@
     /* Menu lateral */
     #headerMenu{
         width: 100%;
+    }
+
+    nav{
+        background-color: transparent;
+        border: none;
     }
 
     #menu{

@@ -21,6 +21,8 @@ body.darkmode {
 body {
     background-color: var(--bg);
     color: var(--primaryText);
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 #mapa {
@@ -79,6 +81,9 @@ body {
     gap: 10px;
     margin-top: 10px;
     width: 490px;
+    background-color: var(--bg);
+    border: 1px solid var(--secondText);
+    width: 100%;
 }
 
 div#iconw img{
