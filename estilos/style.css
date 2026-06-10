@@ -41,6 +41,11 @@ body {
     flex: 1;
 }
 
+nav{
+    background-color: transparent;
+    border: none;
+}
+
 #headerMenu i {
     font-size: 2em;
     cursor: pointer;
@@ -146,4 +151,7 @@ div#iconw{
 
 #climaPrincipal{
     background-color: var(--bg);
+    min-height: 200px;
+    margin: 10px;
+    border-radius: 20px;
 }

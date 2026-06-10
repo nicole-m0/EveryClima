@@ -53,16 +53,15 @@
         width: 100%;
     }
 
-    nav{
-        background-color: transparent;
-        border: none;
-    }
-
     #menu{
         display: flex;
         position: static;
         width: 100%;
         padding: 0;
+    }
+
+    #menu.active {
+        border: none transparent;
     }
 
     #ulFicha{
