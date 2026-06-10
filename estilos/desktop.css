@@ -120,17 +120,14 @@
         padding-bottom: 30px;
 
         display: grid;
-
         grid-template-columns: 2fr 1fr;
         grid-template-rows: auto auto auto;
-
         gap: 20px;
     }
 
     /* Cards temporários */
     #climaPrincipal{
         min-height: 250px;
-        background: var(--cards);
         border-radius: 20px;
     }
 
@@ -148,7 +145,7 @@
 
     #previsaoSeteDias{
         grid-row: 1 / span 3;
-
+        grid-column: 2;
         min-height: 650px;
 
         background: var(--cards);

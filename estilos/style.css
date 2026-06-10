@@ -135,7 +135,6 @@ div#iconw{
     flex-direction: column;
 }
 
-#climaPrincipal,
 #previsaoProximasHoras,
 #airCondition,
 #previsaoSeteDias{
@@ -143,4 +142,8 @@ div#iconw{
     min-height: 200px;
     margin: 10px;
     border-radius: 20px;
+}
+
+#climaPrincipal{
+    background-color: var(--bg);
 }
