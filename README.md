@@ -1,2 +1,2 @@
-<img src="prototipoGastosFin.png" width="100"> #EveryClima
+#EveryClima
 Site de previsão climática
