@@ -1,3 +1,3 @@
-# <img src="img/iconnav.png" width="35"> EveryClima
+# <img src="img/weather-iconnav.png" width="35"> EveryClima
 
 Site de previsão climática
