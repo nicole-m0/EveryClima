@@ -150,3 +150,9 @@
         background: var(--cards);
         border-radius: 20px;
     }
+
+    #climaPrincipal img{
+        width: 200px;
+        height: 200px;
+    }
+   

@@ -54,17 +54,19 @@ fetch(
     umidadeElemento.textContent = data.main.humidity;
     temperaturaElemento.textContent = `${Math.round(data.main.temp)}°C`;
     const codigo = data.weather[0].icon;
-
+    
     const icones = {
-        "01d": "img/appclima-manhãensolarada.png",
-        "01n": "img/appclima-noite.png",
-        "02d": "img/appclima-manhãnublada.png",
-        "02n": "img/appclima-noite.png",
-        "03d": "img/cloudy.png",
-        "04d": "img/cloudy.png",
+        "01d": "img/sun_10484062.png",
+        "01n": "img/moon2.png",
+        "02d": "img/sun+clouds.png",
+        "02n": "img/moon+couds.png",
+        "03d": "img/clouds2_11215496.png",
+        "04d": "img/clouds2_11215496.png",
         "09d": "img/rain.png",
         "10d": "img/rain.png",
-        "11d": "img/storm.png"
+        "11d": "img/storm.png",
+        "13d": "img/snowing_692454.png",
+        "50d": "img/fog2.png" 
     };
 
 imgIcon.src = icones[codigo];

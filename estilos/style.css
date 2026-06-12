@@ -154,4 +154,23 @@ div#iconw{
     min-height: 200px;
     margin: 10px;
     border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#climaPrincipal img{
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-right: 70px;
+}
+#climaPrincipal h1{
+    font-size: 4em;
+    margin-top: 60px;
+}
+#climaPrincipal h2{
+    font-size: 2em;
+}
+#climaPrincipal #cp1{
+    margin: 30px;
 }
