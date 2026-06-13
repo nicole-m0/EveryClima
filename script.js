@@ -32,9 +32,9 @@ btnTema.addEventListener('click', () => {
 });
 
 // sistema
-// chave: 7a3830947cea0cd067c065505ee93f7a
+// chave
 // clima atual
-const apiKey = "7a3830947cea0cd067c065505ee93f7a";
+const apiKey = "minha_chave";
 const cidade = "Oeiras";
 
 // clima principal: cidade, humidade, temperatura e icon
