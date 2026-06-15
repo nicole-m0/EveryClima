@@ -52,12 +52,30 @@
                 <img id="imagemTemp" alt="Ícone do clima">
             </div>
 
-            <div id="forecast" class="forecast-container">
-
+            <div id="forecast-wrapper">
+                <button id="btnLeft">◀</button>
+                <div id="forecast" class="forecast-container"></div>
+                <button id="btnRight">▶</button>
             </div>
 
-            <div id="airCondition">
-
+            <div id="airConditions">
+                <p><i>Air Conditions</i></p>
+                <div class="conditions">
+                    <div class="iconConditions"><i class="fa-solid fa-temperature-high"></i> <p>Sensação Térmica</p></div>
+                    <h2><span id="realFeel"></span></h2>
+                </div>
+                <div class="conditions">
+                    <div class="iconConditions"><i class="fa-solid fa-droplet"></i> <p>Umidade</p></div>
+                    <h2><span id="umidity"></span></h2>
+                </div>
+                <div class="conditions">
+                    <div class="iconConditions"><i class="fa-solid fa-wind"></i> <p>Vento</p></div>
+                    <h2><span id="vento"></span></h2>
+                </div>
+                <div class="conditions">
+                    <div class="iconConditions"><i class="fa-solid fa-cloud-showers-heavy"></i> <p>Chance de Chuva</p></div>
+                    <h2><span id="chanceChuva"></span></h2>
+                </div>
             </div>
 
             <div id="previsaoSeteDias">

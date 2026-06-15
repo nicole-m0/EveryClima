@@ -140,9 +140,8 @@ div#iconw{
     flex-direction: column;
 }
 
-#airCondition,
+
 #previsaoSeteDias{
-    background-color: var(--cards);
     min-height: 200px;
     margin: 10px;
     border-radius: 20px;
@@ -186,7 +185,7 @@ div#iconw{
 
 .forecast-card{
     flex-shrink: 0;
-    min-width: 100px;
+    min-width: 150px;
 
     display: flex;
     flex-direction: column;
@@ -203,4 +202,47 @@ div#iconw{
 .forecast-card img{
     width: 40px;
     height: 40px;
+}
+
+.forecast-container {
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.forecast-container::-webkit-scrollbar {
+    display: none; /* Chrome */
+}
+.forecast-wrapper {
+    position: relative;
+}
+
+#btnLeft,
+#btnRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#btnLeft {
+    left: 5px;
+}
+#btnRight {
+    right: 5px;
+}
+
+#airConditions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    background-color: var(--cards);
+    border-radius: 20px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#airConditions p {
+    grid-column: span 2;
+}
+
+.iconConditions {
+    display: flex;
 }

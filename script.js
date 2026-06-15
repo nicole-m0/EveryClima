@@ -31,10 +31,26 @@ btnTema.addEventListener('click', () => {
     );
 });
 
+// botões de rolagem forecast
+const forecast = document.getElementById("forecast");
+
+document.getElementById("btnRight").addEventListener("click", () => {
+    forecast.scrollBy({
+        left: 150,
+        behavior: "smooth"
+    });
+});
+
+document.getElementById("btnLeft").addEventListener("click", () => {
+    forecast.scrollBy({
+        left: -150,
+        behavior: "smooth"
+    });
+});
+
 // sistema
-// chave
 // clima atual
-const apiKey = "minha_chave";
+const apiKey = "7a3830947cea0cd067c065505ee93f7a";
 const cidade = "Oeiras";
 
 // clima principal: cidade, humidade, temperatura e icon
@@ -53,6 +69,12 @@ fetch(
     cidadeElemento.textContent = data.name;
     umidadeElemento.textContent = data.main.humidity;
     temperaturaElemento.textContent = `${Math.round(data.main.temp)}°C`;
+
+    // air conditions
+    document.getElementById('realFeel').textContent = `${Math.round(data.main.feels_like)}°C`;
+    document.getElementById('umidity').textContent = `${data.main.humidity}%`;
+    document.getElementById('vento').textContent = `${data.wind.speed} km/h`;
+
     const codigo = data.weather[0].icon;
     
     const icones = {
@@ -78,6 +100,9 @@ fetch(
 )
 .then(response => response.json())
 .then(data => {
+
+    const chanceChuva = Math.round(data.list[0].pop * 100);
+    document.getElementById('chanceChuva').textContent = `${chanceChuva}%`;
 
     const forecastContainer = document.getElementById("forecast");
 
