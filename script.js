@@ -31,7 +31,7 @@ btnTema.addEventListener('click', () => {
     );
 });
 
-// botões de rolagem forecast
+// scroll forecast
 const forecast = document.getElementById("forecast");
 
 document.getElementById("btnRight").addEventListener("click", () => {
@@ -54,7 +54,6 @@ const apiKey = "7a3830947cea0cd067c065505ee93f7a";
 const cidade = "Oeiras";
 
 // clima principal: cidade, humidade, temperatura e icon
-
 // cidade
 const cidadeElemento = document.getElementById('cidade');
 const umidadeElemento = document.getElementById('umidade');
@@ -148,6 +147,41 @@ fetch(
         forecastContainer.appendChild(card);
     });
 });
+
+// previsão pelos próximos dias
+fetch(
+  `https://api.openweathermap.org/data/2.5/forecast?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`
+)
+
+.then(response => response.json())
+.then(data => {
+    const previsaoDias = document.getElementById('previsaoDias');
+    previsaoDias.innerHTML = "";
+    const dias = data.list.filter(item =>
+    item.dt_txt.includes("12:00")
+    );
+    dias.forEach(item => {
+        const dataObj = new Date(item.dt_txt);
+
+        const diaDaSemana = dataObj.toLocaleDateString(
+            "pt-BR", {weekday: "short"}
+        );
+
+        const temperaturaDias = Math.round(item.main.temp);
+        const codigo = item.weather[0].icon;
+
+        const cardDias = document.createElement('div');
+        card.classList.add('dia-card');
+
+        cardDias.innerHTML = `
+        <p>${diaSemana}</p>
+        <img> scr="${icones[codigo]} alt="">
+        <span>${temperaturaDias}</span>
+        `;
+
+        previsaoDias.appendChild(cardDias);
+    })
+})
 
 // gráfico
 fetch(
