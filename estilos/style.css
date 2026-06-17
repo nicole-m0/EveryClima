@@ -141,13 +141,6 @@ div#iconw{
     padding: 5px;
 }
 
-
-#previsaoDias{
-    min-height: 200px;
-    margin: 10px;
-    border-radius: 20px;
-}
-
 #climaPrincipal{
     background-color: var(--bg);
     min-height: 200px;
@@ -203,7 +196,7 @@ div#iconw{
     overflow-x: auto;
     overflow-y: hidden;
     justify-content: space-between;
-    padding: 10px;
+    padding: 20px;
 }
 
 .forecast-card{
@@ -249,6 +242,7 @@ div#iconw{
     left: 5px;
     top: 41%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 #btnRight{
@@ -256,6 +250,7 @@ div#iconw{
     right: 5px;
     top: 41%;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 
 #airConditions {
@@ -274,4 +269,48 @@ div#iconw{
 
 .iconConditions {
     display: flex;
+}
+
+#previsaoDias{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    min-height: 200px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: var(--cards);
+}
+
+#previsaoDias p{
+    margin: 20px 0 0 20px;
+}
+
+.listaDias{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.listaDias:not(:last-child)::after{
+    content: "";
+    position: absolute;
+    background-color: var(--secondText);
+    width: 80%;
+    height: 1px;
+    bottom: -5px;
+    left: 10%;
+}
+
+.listaDias:first-of-type::after{
+    display: none;
+}
+
+.listaDias img{
+    width: 50px;
+}
+
+.listaDias p, span{
+    font-size: 1.5em;
+    font-weight: bolder;
 }

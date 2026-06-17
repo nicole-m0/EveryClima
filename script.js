@@ -50,7 +50,7 @@ document.getElementById("btnLeft").addEventListener("click", () => {
 
 // sistema
 // clima atual
-const apiKey = "";
+const apiKey = "7a3830947cea0cd067c065505ee93f7a";
 const cidade = "Oeiras";
 
 // clima principal: cidade, humidade, temperatura e icon
@@ -156,10 +156,7 @@ fetch(
 .then(response => response.json())
 .then(data => {
     const previsaoDias = document.getElementById('previsaoDias');
-    previsaoDias.innerHTML = "";
-    const dias = data.list.filter(item =>
-    item.dt_txt.includes("12:00")
-    );
+    const dias = data.list.filter(item => item.dt_txt.includes("12:00")).slice(0, 5);
     dias.forEach(item => {
         const dataObj = new Date(item.dt_txt);
 
@@ -170,16 +167,38 @@ fetch(
         const temperaturaDias = Math.round(item.main.temp);
         const codigo = item.weather[0].icon;
 
-        const cardDias = document.createElement('div');
-        card.classList.add('dia-card');
+        const icones = {
+            "01d": "img/sun_10484062.png",
+            "01n": "img/moon2.png",
+            "02d": "img/sun+clouds.png",
+            "02n": "img/moon+couds.png",
+            "03d": "img/clouds2_11215496.png",
+            "03n": "img/clouds2_11215496.png",
+            "04d": "img/clouds2_11215496.png",
+            "04n": "img/clouds2_11215496.png",
+            "09d": "img/rain.png",
+            "09n": "img/rain.png",
+            "10d": "img/rain.png",
+            "10n": "img/rain.png",
+            "11d": "img/storm.png",
+            "11n": "img/storm.png",
+            "13d": "img/snowing_692454.png",
+            "13n": "img/snowing_692454.png",
+            "50d": "img/fog2.png",
+            "50n": "img/fog2.png"
+        };
 
-        cardDias.innerHTML = `
-        <p>${diaSemana}</p>
-        <img> scr="${icones[codigo]} alt="">
-        <span>${temperaturaDias}</span>
+        const listaDias = document.createElement('div');
+        listaDias.classList.add('listaDias');
+        listaDias.innerHTML = "";
+
+        listaDias.innerHTML = `
+        <p>${diaDaSemana}</p>
+        <img src="${icones[codigo]}" alt="">
+        <span>${temperaturaDias}°C</span>
         `;
 
-        previsaoDias.appendChild(cardDias);
+        previsaoDias.appendChild(listaDias);
     })
 })
 
