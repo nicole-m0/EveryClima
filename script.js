@@ -202,6 +202,28 @@ fetch(
     })
 })
 
+// mapa
+const mapa = document.getElementById('mapa')
+
+    navigator.geolocation.getCurrentPosition((position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    const map = L.map('map').setView([latitude, longitude], 17);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap'
+    }).addTo(map);
+
+    L.marker([latitude, longitude]).addTo(map);
+
+    setTimeout(() => {
+        map.invalidateSize();
+    }, 100);
+});
+
+
 // gráfico
 fetch(
   `https://api.openweathermap.org/data/2.5/forecast?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`

@@ -1,11 +1,15 @@
 :root {
+    --linear1: #f8eba6 ;
+    --linear2: #ffd8c2;
     --bg: #f0f1f5;
-    --cards: #bfc6d4;
+    --cards: #f0f1f5;
     --primaryText: #0a0e15;
     --secondText: #4e576a;
 }
 
 body.darkmode {
+    --linear1: #0c1446;
+    --linear2:#2b5c92;
     --bg: #0a0e15;
     --cards: #373f4e;
     --primaryText: #f0f1f5;
@@ -19,7 +23,7 @@ body.darkmode {
 }
 
 body {
-    background-color: var(--bg);
+    background: linear-gradient(to bottom right, var(--linear1), var(--linear2));
     color: var(--primaryText);
     overflow-x: hidden;
     overflow-y: auto;
@@ -142,7 +146,7 @@ div#iconw{
 }
 
 #climaPrincipal{
-    background-color: var(--bg);
+    background-color: transparent;
     min-height: 200px;
     margin: 10px;
     border-radius: 20px;
@@ -168,7 +172,7 @@ div#iconw{
 }
 
 #previsaoProximasHoras {
-    background-color: var(--cards);
+    background-color: var(--bg);
     border-radius: 20px;
     padding: 10px;
 }
@@ -257,7 +261,7 @@ div#iconw{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    background-color: var(--cards);
+    background-color: var(--bg);
     border-radius: 20px;
     padding: 20px;
     margin-top: 10px;
@@ -278,7 +282,7 @@ div#iconw{
     min-height: 200px;
     margin-top: 10px;
     border-radius: 20px;
-    background-color: var(--cards);
+    background-color: var(--bg);
 }
 
 #previsaoDias p{
@@ -313,4 +317,21 @@ div#iconw{
 .listaDias p, span{
     font-size: 1.5em;
     font-weight: bolder;
+}
+
+#mapContainer{
+    background-color: var(--bg);
+    border-radius: 20px;
+    height: 400px;
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+}
+#mapContainer p{
+    padding: 10px 0 0 10px;
+}
+#map{
+    width: 95%;
+    height: 90%;
+    border-radius: 20px;
+    margin: 10px auto auto;
 }

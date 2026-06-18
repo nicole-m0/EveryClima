@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="estilos/tablet.css" media="screen and (min-width: 768px)">
     <link rel="shortcut icon" href="img/weather-iconnav.png" type="image/x-icon">
     <script src="https://kit.fontawesome.com/68415d66c2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <title>EveryClima</title>
 </head>
 <body class="darkmode">
@@ -85,6 +87,13 @@
                 <p><i>Pelos Próximos 5 dias</i></p>
                 <div class="listaDias"></div>
             </div>
+
+            <div id="mapContainer">
+                <p><i>Mapa</i></p>
+                <div id="map"></div>
+            </div>
+
+            <div id="dashboardTela"></div>
         </main>
 
     </section>

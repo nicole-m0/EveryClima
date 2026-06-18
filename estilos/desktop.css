@@ -18,6 +18,9 @@ body{
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100px;
     min-height: 100vh;
     padding-top: 20px;
@@ -150,6 +153,7 @@ body{
    
 #forecast{
     grid-column: 1;
+    height: 220px;
 }
 
 .forecast-card {
@@ -166,4 +170,8 @@ body{
 
 .listaDias p, span{
     font-size: 2em;
+}
+
+#mapContainer {
+    grid-column: span 2;
 }
