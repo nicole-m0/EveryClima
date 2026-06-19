@@ -50,7 +50,7 @@ document.getElementById("btnLeft").addEventListener("click", () => {
 
 // sistema
 // clima atual
-const apiKey = "";
+const apiKey = "7a3830947cea0cd067c065505ee93f7a";
 const cidade = "Oeiras";
 
 // clima principal: cidade, humidade, temperatura e icon
