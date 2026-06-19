@@ -10,6 +10,7 @@
     <script src="https://kit.fontawesome.com/68415d66c2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>EveryClima</title>
 </head>
 <body class="darkmode">
@@ -27,14 +28,15 @@
         </div>
 
         <div id="headerMenu">
-            <i class="fa-solid fa-bars" id="menuIcon"></i>
+            <button id="theme">
+                <i class="fa-solid fa-moon"></i>
+            </button>
 
             <nav id="menu">
                 <ul id="ulFicha">
-                    <li><a href="#" id="inicio"><i class="fa-solid fa-house-chimney"></i> Início</a></li>
-                    <li><a href="#" id="mapa"><i class="fa-solid fa-map-location-dot"></i> Mapa</a></li>
-                    <li><a href="#" id="theme"><i class="fa-solid fa-moon"></i> Theme</a></li>
-                    <li><a href="#" id="dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                    <li><a href="#climaPrincipal" id="inicio"><i class="fa-solid fa-house-chimney"></i> Início</a></li>
+                    <li><a href="#mapContainer" id="mapa"><i class="fa-solid fa-map-location-dot"></i> Mapa</a></li>
+                    <li><a href="#graficoContainer" id="dashboard"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
                 </ul>
             </nav>
         </div>
@@ -89,11 +91,13 @@
             </div>
 
             <div id="mapContainer">
-                <p><i>Mapa</i></p>
                 <div id="map"></div>
             </div>
 
-            <div id="dashboardTela"></div>
+            <div id="graficoContainer" class="graficoContainer">
+                <p><i>Dashboard</i></p>
+                <canvas id="graficoHoras"></canvas>
+            </div>
         </main>
 
     </section>

@@ -1,6 +1,7 @@
 body{
     overflow-x: hidden;
     overflow-y: auto;
+    scroll-behavior: smooth;
 }
 
 /* Layout principal */
@@ -27,6 +28,23 @@ body{
     border-right: 1px solid var(--cards);
 }
 
+#ulFicha a, button#theme {
+    color: var(--primaryText);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+    padding: 10px 15px;
+}
+
+button#theme{
+    width: 70px;
+    height: 70px;
+}
+
 /* Logo */
 #headercll{
     display:flex;
@@ -40,31 +58,18 @@ body{
     height:55px;
 }
 
-/* Esconde hamburguer */
-#menuIcon{
-    display: none;
-}
-
 /* Menu lateral */
 #headerMenu{
-    width: 100%;
-}
-
-#menu{
     display: flex;
-    position: static;
-    width: 100%;
-    padding: 0;
-}
-
-#menu.active {
-    border: none transparent;
+    flex-direction: column;
+    margin-top: 200px;
+    gap: 20px;
 }
 
 #ulFicha{
     width: 100%;
     align-items: center;
-    margin-top: 200px;
+    
 }
 
 #ulFicha a{
@@ -125,7 +130,6 @@ body{
     grid-column: 1;
     grid-row: 2;
     height: 100%;
-    background: var(--cards);
     border-radius: 20px;
 }
 
@@ -133,7 +137,6 @@ body{
     grid-column: 1;
     grid-row: 3;
     min-height: 180px;
-    background: var(--cards);
     border-radius: 20px;
 }
 
@@ -142,7 +145,6 @@ body{
     grid-row: 1 / span 3;
     grid-column: 2;
     min-height: 650px;
-    background: var(--cards);
     border-radius: 20px;
 }
 
@@ -174,4 +176,18 @@ body{
 
 #mapContainer {
     grid-column: span 2;
+}
+
+.graficoContainer{
+    grid-column: span 2;
+    width: 100%;
+    height: 400px; 
+    padding: 15px;
+    background: var(--bg);
+    border-radius: 20px;
+}
+
+#graficoHoras{
+    width: 100% !important;
+    height: 100% !important;
 }
