@@ -58,6 +58,10 @@ button#theme{
     height:55px;
 }
 
+#menu{
+    display: block;
+}
+
 /* Menu lateral */
 #headerMenu{
     display: flex;
