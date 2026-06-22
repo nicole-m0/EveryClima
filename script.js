@@ -60,7 +60,7 @@ navLinks.forEach(link => {
 
 // sistema
 // clima atual
-const apiKey = "";
+const apiKey = "7a3830947cea0cd067c065505ee93f7a";
 const cidade = "Oeiras";
 const icones = {
             "01d": "img/sun_10484062.png",
