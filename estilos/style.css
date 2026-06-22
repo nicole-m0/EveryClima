@@ -123,6 +123,12 @@ div#iconw{
     padding: 5px;
 }
 
+#climaPrincipal,
+#mapContainer,
+#graficoContainer {
+    scroll-margin-top: 30px;
+}
+
 #climaPrincipal{
     background-color: transparent;
     min-height: 200px;
@@ -328,8 +334,8 @@ div#iconw{
 
 footer{
     height: 100px;
-    background-color: var(--primaryText);
-    color: var(--secondText);
+    background-color: #0a0e15;
+    color: #4e576a;
     display: flex;
     justify-content: center;
     align-items: center;

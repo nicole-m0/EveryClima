@@ -40,6 +40,24 @@ document.getElementById("btnLeft").addEventListener("click", () => {
     });
 });
 
+// Scroll suave para links de navegação
+const navLinks = document.querySelectorAll('#menu ul a.link');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
 // sistema
 // clima atual
 const apiKey = "7a3830947cea0cd067c065505ee93f7a";
@@ -65,30 +83,52 @@ const icones = {
             "50n": "img/fog2.png"
         };
 
-// clima principal: cidade, humidade, temperatura e icon
 // cidade
 const cidadeElemento = document.getElementById('cidade');
 const umidadeElemento = document.getElementById('umidade');
 const temperaturaElemento = document.getElementById('temperatura');
 const imgIcon = document.getElementById('imagemTemp');
 
-fetch(
-  `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`
-)
-.then(response => response.json())
-.then(data => {
-    cidadeElemento.textContent = data.name;
-    umidadeElemento.textContent = data.main.humidity;
-    temperaturaElemento.textContent = `${Math.round(data.main.temp)}°C`;
+function carregarClima(cidade) {
 
-    // air conditions
-    document.getElementById('realFeel').textContent = `${Math.round(data.main.feels_like)}°C`;
-    document.getElementById('umidity').textContent = `${data.main.humidity}%`;
-    document.getElementById('vento').textContent = `${data.wind.speed} km/h`;
+    fetch(
+        `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`
+    )
+    .then(response => response.json())
+    .then(data => {
 
-    const codigo = data.weather[0].icon;
+        cidadeElemento.textContent = data.name;
+        umidadeElemento.textContent = data.main.humidity;
+        temperaturaElemento.textContent = `${Math.round(data.main.temp)}°C`;
 
-imgIcon.src = icones[codigo];
+        document.getElementById('realFeel').textContent = `${Math.round(data.main.feels_like)}°C`;
+
+        document.getElementById('umidity').textContent = `${data.main.humidity}%`;
+
+        document.getElementById('vento').textContent = `${data.wind.speed} km/h`;
+
+        const codigo = data.weather[0].icon;
+        imgIcon.src = icones[codigo];
+    });
+}
+
+carregarClima("Oeiras");
+
+const pesquisa = document.getElementById("pesquisa");
+
+pesquisa.addEventListener("keydown", (e) => {
+    console.log("Tecla:", e.key);
+
+    if (e.key === "Enter") {
+        console.log("ENTER FUNCIONOU");
+
+        const cidade = pesquisa.value.trim();
+
+        if (cidade) {
+            console.log("Buscando:", cidade);
+            carregarClima(cidade);
+        }
+    }
 });
 
 // previsão pelas próximas horas
