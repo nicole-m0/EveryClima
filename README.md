@@ -26,10 +26,10 @@ Sistema de previsão climática desenvolvido com HTML, CSS e JavaScript, utiliza
 
 ## 📸 Demonstração
 
-### Tema Claro
+### Tema Claro ☀️
 <img src="img/everyclima-claro.png" alt="Tema Claro">
 
-### Tema Escuro
+### Tema Escuro 🌑
 <img src="img/everyclima-dark.png" alt="Tema Escuro">
 
 ## 🚀 Como Executar
