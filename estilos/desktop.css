@@ -195,3 +195,31 @@ button#theme{
     width: 100% !important;
     height: 100% !important;
 }
+
+/*Breakpoint*/
+@media screen and (max-width: 1200px){
+
+    #content{
+        grid-template-columns: 1fr;
+    }
+
+    #previsaoDias{
+        grid-column: 1;
+        grid-row: auto;
+        min-height: auto;
+    }
+
+    #mapContainer,
+    .graficoContainer{
+        grid-column: 1;
+    }
+
+    .listaDias p,
+    .listaDias span{
+        font-size: 1.2em;
+    }
+
+    .listaDias img{
+        width: 35px;
+    }
+}
